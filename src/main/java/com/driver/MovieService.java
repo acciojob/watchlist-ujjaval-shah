@@ -39,11 +39,11 @@ public class MovieService {
         return null;
     }
 
-    public List<Movie> getMoviesByDirector(String directorName) {
-        List<Movie> movies = new ArrayList<>();
+    public List<String> getMoviesByDirector(String directorName) {
+        List<String> movies = new ArrayList<>();
         if(mr.moviesByDirectorMap.containsKey(directorName))
             for (String movieName: mr.moviesByDirectorMap.get(directorName)) {
-                movies.add(mr.movieMap.get(movieName));
+                movies.add(mr.movieMap.get(movieName).getName());
             }
         return movies;
     }
