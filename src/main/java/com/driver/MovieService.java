@@ -48,10 +48,10 @@ public class MovieService {
         return movies;
     }
 
-    public List<Movie> getAllMovies() {
-        List<Movie> movies = new ArrayList<>();
+    public List<String> getAllMovies() {
+        List<String> movies = new ArrayList<>();
         for (String movieName: mr.movieMap.keySet()) {
-            movies.add(mr.movieMap.get(movieName));
+            movies.add(mr.movieMap.get(movieName).getName());
         }
         return movies;
     }
