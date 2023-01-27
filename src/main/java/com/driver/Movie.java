@@ -40,4 +40,9 @@ public class Movie {
     public void setImdbRating(double imdbRating) {
         this.imdbRating = imdbRating;
     }
+
+    @Override
+    public String toString() {
+        return this.getName();
+    }
 }
